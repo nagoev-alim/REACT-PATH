@@ -1,0 +1,191 @@
+@import "css/base/reset.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Font Family */
+  --font-sans: 'Plus Jakarta Sans', 'Poppins', 'Work Sans', 'Quicksand', 'DM Sans', 'IBM Plex Sans', 'Rubik', "Google Sans", system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+
+  /* Colors */
+  --clr-white: #fff;
+  --clr-black: #333;
+  --clr-red: #fc5859;
+  --clr-blue: #577ffb;
+  --clr-green: #42a05b;
+  --clr-accent: #2c343f;
+
+  /* Sizes */
+  --maximumViewportWidth: 1440;
+
+  /* Theme */
+  --theme-font-weight: 400;
+  --theme-font-family: var(--font-sans);
+  --theme-base-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
+  --theme-body-background: var(--clr-white);
+  --theme-body-color: var(--clr-black);
+}
+
+.npp {
+  /* Fonts */
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight);
+  /* Colors */
+  background-color: var(--theme-body-background, #fff);
+  color: var(--theme-body-color, #333);
+  /* Sizes */
+  width: 100%;
+  min-height: 100vh;
+  /* Display */
+  display: grid;
+  place-items: center;
+  padding: 10px;
+
+  /* Author */
+
+  &-author {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &-app {
+    box-shadow: var(--theme-base-shadow);
+    width: 100%;
+    padding: calc(10px + (20 - 10) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+    display: grid;
+    gap: 15px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 800px;
+    overflow: hidden;
+
+    .title {
+      font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
+
+main {
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: grid;
+  gap: 20px;
+}
+
+.score {
+  position: relative;
+  border: 5px solid;
+  border-radius: 4px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0;
+  font-size: calc(70px + (150 - 70) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+  line-height: 1;
+  font-weight: 700;
+
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(25%, -50%);
+    background-color: var(--clr-red);
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+
+    @media (min-width: 768px) {
+      transform: translate(50%, -50%);
+    }
+
+    &--user {
+      transform: translate(-50%, -50%);
+    }
+
+    &--computer {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.options {
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__btn {
+    --size: calc(70px + (120 - 70) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--size);
+    height: var(--size);
+    padding: 10px;
+    border-radius: 50%;
+    border: 5px solid;
+
+    img {
+      pointer-events: none;
+    }
+  }
+}
+
+.message {
+  font-size: calc(14px + (23 - 14) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+  font-weight: 700;
+
+  .small {
+    font-size: calc(10px + (15 - 10) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+
+    &.win {
+      color: var(--clr-green);
+    }
+
+    &.lose {
+      color: var(--clr-red);
+    }
+
+    &.equal {
+      color: var(--clr-blue);
+    }
+  }
+}
+
+footer {
+  display: grid;
+  gap: 20px;
+
+  button {
+    width: 100%;
+    margin-inline: auto;
+    min-height: 48px;
+    min-width: 80px;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 1px solid #DEE2E5;
+
+    &:hover {
+      opacity: 0.9;
+      background-color: var(--clr-black);
+      color: var(--clr-white);
+    }
+  }
+}
+
+
