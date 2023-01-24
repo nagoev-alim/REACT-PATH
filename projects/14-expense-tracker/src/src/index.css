@@ -1,0 +1,200 @@
+@import "css/base/reset.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Font Family */
+  --font-sans: 'Plus Jakarta Sans', 'Poppins', 'Work Sans', 'Quicksand', 'DM Sans', 'IBM Plex Sans', 'Rubik', "Google Sans", system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+
+  /* Colors */
+  --clr-white: #fff;
+  --clr-black: #333;
+  --clr-red: #fc5859;
+  --clr-blue: #577ffb;
+  --clr-green: #42a05b;
+  --clr-accent: #2c343f;
+
+  /* Sizes */
+  --maximumViewportWidth: 1440;
+
+  /* Theme */
+  --theme-font-weight: 400;
+  --theme-font-family: var(--font-sans);
+  --theme-base-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
+  --theme-body-background: #FBFBFB;
+  --theme-body-color: var(--clr-black);
+}
+
+.npp {
+  /* Fonts */
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight);
+  /* Colors */
+  background-color: var(--theme-body-background, #fff);
+  color: var(--theme-body-color, #333);
+  /* Sizes */
+  width: 100%;
+  min-height: 100vh;
+  /* Display */
+  display: grid;
+  place-items: center;
+  padding: 10px;
+
+  /* Author */
+
+  &-author {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &-app {
+    width: 100%;
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    box-shadow: var(--theme-base-shadow);
+
+    max-width: 400px;
+
+    .title {
+      font-size: calc(24px + (35 - 24) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+      font-weight: 700;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      margin-inline: auto;
+      min-height: 48px;
+      min-width: 80px;
+      border-radius: 6px;
+      font-weight: 500;
+      border: 1px solid #DEE2E5;
+
+      &:hover {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+      }
+    }
+  }
+}
+
+.expense-tracker {
+  display: grid;
+  gap: 15px;
+
+  .container {
+    display: grid;
+    gap: 15px;
+  }
+
+  header {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #FBFBFB;
+    box-shadow: inset 0 0 5px #0000000d, inset 0 25px 35px #00000008;
+    text-align: center;
+    font-weight: 700;
+
+    h2 {
+      font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+    }
+
+    p {
+      font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+    }
+  }
+
+  .stats {
+    --border: 2px solid rgb(27 33 36 / 11%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 4px;
+    border: var(--border);
+    text-align: center;
+
+    li {
+      &:nth-child(1) {
+        border-right: var(--border)
+      }
+
+      p {
+        padding: 12px;
+        font-weight: 500;
+
+        &:nth-child(1) {
+          font-weight: 600;
+          border-bottom: var(--border)
+        }
+      }
+    }
+
+    &__item--plus {
+      color: var(--clr-green)
+    }
+
+    &__item--minus {
+      color: var(--clr-red)
+    }
+  }
+
+  h5 {
+    font-weight: 700;
+    text-align: left;
+    border-radius: 8px;
+    background-color: #FBFBFB;
+    box-shadow: inset 0 0 5px #0000000d, inset 0 25px 35px #00000008;
+    padding: 10px
+  }
+
+  .history {
+    display: grid;
+    gap: 10px;
+
+    li {
+      padding: 10px;
+      display: flex;
+      border-radius: 8px;
+      box-shadow: inset 0 0 5px #0000000d, inset 0 25px 35px #00000008;
+      text-align: left;
+      align-items: center;
+
+      p {
+        flex: 1;
+      }
+
+      button {
+        padding: 4px;
+        border: none;
+        min-height: auto;
+        min-width: auto;
+      }
+
+      span {
+        font-weight: 600;
+        padding-left: 10px;
+        padding-right: 10px
+      }
+
+      &.plus {
+        box-shadow: inset 0 0 3px 1px #22b02e38, inset 0 25px 35px #22b02e0d;
+
+        span {
+          color: var(--clr-green)
+        }
+      }
+
+      &.minus {
+        box-shadow: inset 0 0 3px 1px #c5292a38, inset 0 25px 35px #c5292a0d;
+
+        span {
+          color: var(--clr-red);
+        }
+      }
+    }
+  }
+}
