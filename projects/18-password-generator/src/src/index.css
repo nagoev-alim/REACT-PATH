@@ -1,0 +1,261 @@
+@import "css/base/reset.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Font Family */
+  --font-sans: 'Plus Jakarta Sans', 'Poppins', 'Work Sans', 'Quicksand', 'DM Sans', 'IBM Plex Sans', 'Rubik', "Google Sans", system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+
+  /* Colors */
+  --clr-white: #fff;
+  --clr-black: #333;
+  --clr-red: #fc5859;
+  --clr-blue: #577ffb;
+  --clr-green: #42a05b;
+  --clr-accent: #2c343f;
+
+  /* Sizes */
+  --maximumViewportWidth: 1440;
+
+  /* Theme */
+  --theme-font-weight: 400;
+  --theme-font-family: var(--font-sans);
+  --theme-base-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
+  --theme-body-background: #FBFBFB;
+  --theme-body-color: var(--clr-black);
+}
+
+.npp {
+  /* Fonts */
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight);
+  /* Colors */
+  background-color: var(--theme-body-background, #fff);
+  color: var(--theme-body-color, #333);
+  /* Sizes */
+  width: 100%;
+  min-height: 100vh;
+  /* Display */
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  /* Author */
+
+  &-author {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &-app {
+    width: 100%;
+    display: grid;
+    gap: 15px;
+
+    .title {
+      font-size: calc(24px + (35 - 24) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .button {
+      width: 100%;
+      margin-inline: auto;
+      border-radius: 6px;
+      font-weight: 500;
+      border: 1px solid #DEE2E5;
+      padding: 13px 18px;
+
+      &:hover {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+      }
+    }
+  }
+}
+
+.pwd-generator {
+  max-width: 500px;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  gap: 15px;
+  padding: 20px;
+  box-shadow: var(--theme-base-shadow);
+  border-radius: 10px;
+
+  .label {
+    font-weight: 500;
+  }
+}
+
+.result {
+  position: relative;
+
+  input {
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+    overflow: auto;
+    padding-right: 45px;
+    pointer-events: none;
+    width: 100%;
+    color: var(--clr-black);
+    background-color: rgb(204 204 204 / 16%);
+    font-weight: 600;
+  }
+
+  .clipboard {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 4px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: none;
+    background-color: var(--clr-white);
+  }
+}
+
+.indicator {
+  position: relative;
+  height: 8px;
+  background-color: #CCCCCC;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &:after {
+    transition: all .35s linear;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    content: "";
+    left: 0;
+  }
+
+  &--weak::after {
+    width: 25%;
+    background-color: var(--clr-red);
+  }
+
+  &--fear::after {
+    width: 50%;
+    background-color: var(--clr-blue);
+  }
+
+  &--medium::after {
+    width: 75%;
+    background-color: #fabe29;
+  }
+
+  &--strong::after {
+    width: 100%;
+    background-color: var(--clr-green);
+  }
+}
+
+.length {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+
+  &__range {
+    all: revert;
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    background: #CCCCCC;
+    outline: none;
+    opacity: .7;
+    transition: opacity .2s;
+
+    &:hover {
+      opacity: 1
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      background-color: var(--clr-black);
+      border-radius: 50%;
+      cursor: pointer
+    }
+
+    &::-moz-range-thumb {
+      width: 15px;
+      height: 15px;
+      background-color: var(--clr-black);
+      border-radius: 50%;
+      cursor: pointer
+    }
+  }
+}
+
+.options {
+  display: grid;
+  gap: 15px;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  label {
+    display: flex;
+  }
+}
+
+.options .input-box + .checkbox:before {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  height: 1.15em;
+  width: 1.15em;
+  margin-right: 0.6em;
+  color: rgba(0, 0, 0, 0.275);
+  border: solid 0.06em;
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em inset, 0 0 0 0.07em transparent inset;
+  border-radius: 0.2em;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>') no-repeat center, white;
+  background-size: 0;
+  will-change: color, border, background, background-size, box-shadow;
+  transform: translate3d(0, 0, 0);
+  transition: color 0.1s, border 0.1s, background 0.15s, box-shadow 0.1s;
+}
+
+.options .input-box:enabled:active + .checkbox:before,
+.options .input-box:enabled + .checkbox:active:before {
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset;
+  background-color: #f0f0f0;
+}
+
+.options .input-box:checked + .checkbox:before {
+  background-color: var(--clr-black);
+  background-size: 0.75em;
+  color: rgba(0, 0, 0, 0.075);
+}
+
+.options .input-box:checked:enabled:active + .checkbox:before,
+.options .input-box:checked:enabled + .checkbox:active:before {
+  background-color: var(--clr-black);
+  color: rgba(0, 0, 0, 0.275);
+}
+
+.options .input-box:focus + .checkbox:before {
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(51, 51, 51, 0.55), 0 0 0 5px rgba(51, 51, 51, 0.2);
+}
+
+.options .input-box:focus:active + .checkbox:before,
+.options .input-box:focus + .checkbox:active:before {
+  box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(51, 51, 51, 0.55), 0 0 0 5px rgba(51, 51, 51, 0.2);
+}
+
+.options .input-box:disabled + .checkbox:before {
+  opacity: 0.5;
+}
