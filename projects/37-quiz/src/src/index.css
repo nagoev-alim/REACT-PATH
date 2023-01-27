@@ -1,0 +1,170 @@
+@import "css/base/reset.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Font Family */
+  --font-sans: 'Plus Jakarta Sans', 'Poppins', 'Work Sans', 'Quicksand', 'DM Sans', 'IBM Plex Sans', 'Rubik', "Google Sans", system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+
+  /* Colors */
+  --clr-white: #fff;
+  --clr-black: #333;
+  --clr-red: #fc5859;
+  --clr-blue: #577ffb;
+  --clr-green: #42a05b;
+  --clr-accent: #2c343f;
+
+  /* Sizes */
+  --maximumViewportWidth: 1440;
+
+  /* Theme */
+  --theme-font-weight: 400;
+  --theme-font-family: var(--font-sans);
+  --theme-base-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
+  --theme-body-background: #EFEFEF;
+  --theme-body-color: var(--clr-black);
+}
+
+.npp {
+  /* Fonts */
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight);
+  /* Colors */
+  background-color: var(--theme-body-background, #fff);
+  color: var(--theme-body-color, #333);
+  /* Sizes */
+  width: 100%;
+  min-height: 100vh;
+  /* Display */
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  /* Author */
+
+  &-author {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &-app {
+    width: 100%;
+    display: grid;
+    gap: 15px;
+    place-items: center;
+
+    .title {
+      font-size: calc(24px + (35 - 24) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .button {
+      margin-inline: auto;
+      border-radius: 6px;
+      font-weight: 500;
+      border: 1px solid #DEE2E5;
+      padding: 13px 18px;
+      max-width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+      }
+    }
+
+    .loader {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.quiz {
+  max-width: 600px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 20px;
+  background-color: var(--clr-white);
+  box-shadow: var(--theme-base-shadow);
+  text-align: center;
+  display: grid;
+  align-items: flex-start;
+  gap: 15px;
+  border-radius: 10px;
+  min-height: 250px;
+  position: relative;
+
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  &__setup {
+    display: grid;
+    gap: 15px;
+    position: relative;
+    min-height: 250px;
+  }
+
+  &__form {
+    text-align: left;
+
+    input, select {
+      font-weight: 500;
+      border-color: rgba(51, 51, 51, 0.38);
+    }
+  }
+
+  &__questions {
+    display: grid;
+    gap: 15px;
+
+    ul {
+      display: grid;
+      gap: 15px;
+
+      .button {
+        width: 100%;
+        border-color: rgba(51, 51, 51, 0.38);
+      }
+
+      @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__finish {
+    display: grid;
+    gap: 15px;
+    text-align: center;
+    justify-items: center;
+    img {
+      width: 180px;
+    }
+  }
+
+  .error {
+    color: var(--clr-red);
+    font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+    font-weight: 700;
+    position: absolute;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+  }
+}
