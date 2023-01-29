@@ -6,9 +6,10 @@
 
 ##### ⚡️ Newbie
 
-| **Tags**                                                                           | **Name** | **Description**           | **Live**                                                                           | **Code**                                                                                          |
-|------------------------------------------------------------------------------------|----------|---------------------------|------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Counter  | Simple counter component. | [**Live**](https://npp-react-projects.vercel.app/projects/counter/dist/index.html) | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/counter/source) |
+| **Tags**                                                                           | **Name**     | **Description**                                  | **Live**                                                                                | **Code**                                                                                               |
+|------------------------------------------------------------------------------------|--------------|--------------------------------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Counter      | Simple counter component.                        | [**Live**](https://npp-react-projects.vercel.app/projects/counter/dist/index.html)      | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/counter/source)      |
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Word Counter | Word Counter app for counting words, characters. | [**Live**](https://npp-react-projects.vercel.app/projects/word-counter/dist/index.html) | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/word-counter/source) |
 
 ----
 
