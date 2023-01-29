@@ -1,56 +1,19 @@
-import { FiGithub } from 'react-icons/fi';
-import { useEffect, useState } from 'react';
-import { getRandomNumber } from './utils/getRandomNumber.js';
-import { toast, Toaster } from 'react-hot-toast';
+import { useRef, useState } from 'react';
+import { toast } from 'react-hot-toast';
+import { getRandomNumber } from '../utils/getRandomNumber.js';
 
-/**
- * @component App - Main Component
- * @return {JSX.Element}
- * @constructor
- */
-const App = () => (
-  <>
-    <div className='npp'>
-      <div className='npp-app'>
-        <GuessNumber />
-        <Toaster position='bottom-center' />
-      </div>
-      <a className='npp-author' href='https://github.com/nagoev-alim' target='_blank'>
-        <FiGithub size={25} />
-      </a>
-    </div>
-  </>
-);
-
-export default App;
-
-
-/**
- * @function GuessNumber
- * @return {JSX.Element}
- * @constructor
- */
 const GuessNumber = () => {
-  // =====================
-  // 🚀 Hooks
-  // =====================
   const [user, setUser] = useState(null);
   const [guess, setGuess] = useState([]);
-  const [secret, setSecret] = useState(getRandomNumber(1, 100));
+  const [secret] = useState(getRandomNumber(1, 100));
+  const inputRef = useRef();
 
   console.log(`👋 The number that was guessed is ${secret}`);
 
-  // =====================
-  // 🚀 Methods
-  // =====================
-  /**
-   * @function onSubmit - Form submit handler
-   * @param event
-   */
+  // 🚀 METHODS: ===============================
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
-    const input = form.querySelector('input');
     const { username, guess } = Object.fromEntries(new FormData(form).entries());
 
     // Check username
@@ -60,6 +23,8 @@ const GuessNumber = () => {
         return;
       } else {
         setUser(username);
+        inputRef.current.setAttribute('min', 1);
+        inputRef.current.setAttribute('max', 100);
       }
     }
 
@@ -84,15 +49,12 @@ const GuessNumber = () => {
 
     // Reset form
     form.reset();
-    input.focus();
+    inputRef.current.focus();
   };
 
-  // =====================
-  // 🚀 Render
-  // =====================
-  return <div className='guess-number'>
-    <h1 className='title'>🎲 Guess Number</h1>
-
+  // 🚀 RENDER: ================================
+  return <div className='game'>
+    <h1 className='title game__title'>🎲 Guess Number</h1>
     {user !== null &&
       <p>😄 {user}, there is a number between 0 and 100. Try to guess it in the fewest number of tries. After
         each attempt, there will be a message with the text - 'Few', 'Many' or 'Right'.'
@@ -102,18 +64,23 @@ const GuessNumber = () => {
     {guess.length !== 0 &&
       <ul>{guess.map(({ number, message, isGuessed }, idx) =>
         <li key={idx}>
+          <p>{number}</p>
           <p>{message}</p>
-          <p>{!isGuessed ? number : `🎉 Number of attempts: ${guess.length}`}</p>
+          {isGuessed && <p>🎉 Number of attempts: {guess.length}</p>}
         </li>,
       )}
       </ul>}
 
     <form onSubmit={onSubmit}>
-      <label>
-        {user === null && <input autoFocus name='username' type='text' placeholder='👋 Enter your name' />}
-        {user !== null && <input autoFocus name='guess' type='number' min='1' max='100' placeholder='0' />}
-      </label>
+      <input
+        ref={inputRef}
+        autoFocus
+        name={`${!user ? 'username' : 'guess'}`}
+        type={`${!user ? 'text' : 'number'}`} placeholder={`${!user ? '👋 Enter your name' : 'Enter number'}`}
+      />
     </form>
+
   </div>;
 };
 
+export default GuessNumber;
