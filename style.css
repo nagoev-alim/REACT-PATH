@@ -108,28 +108,96 @@ html, body {
   font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
   display: grid;
   gap: 15px;
+  max-width: 1440px;
+  width: 100%;
+  margin-inline: auto;
 }
 
 .homepage__title {
   font-weight: 700;
   font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+  text-align: center;
 }
 
-.homepage__list {
+.homepage__subtitle {
+  font-weight: 700;
+  font-size: calc(18px + (22 - 18) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+}
+
+.homepage__wrapper {
+  max-width: 1440px;
+  width: 100%;
+  overflow: auto;
+  margin-inline: auto;
   display: grid;
-  gap: 15px;
-  list-style-position: inside;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.homepage__item::marker {
-  content: '🚀 ';
+.table {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.homepage__link {
-  transition: all 0.3s ease;
-  font-weight: 500;
+.table__row {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.homepage__link:hover {
+.table__cell {
+  padding: 10px;
+  display: flex;
+  height: 100%;
+  align-items: baseline;
+}
+
+.table__cell:not(:first-child) {
+  border-left: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.table__row--header .table__cell {
+  background-color: #36304b;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table__row--header .table__cell:not(:first-child) {
+  border-left: 2px solid #6e6884;
+}
+
+.table__cell--stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.table__cell--stack span {
+  background-color: #f6f6f6;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.table__cell--stack span:nth-child(1) {
+  background-color: #e44d27;
+}
+
+.table__cell--stack span:nth-child(2) {
+  background-color: #1472b6;
+}
+
+.table__cell--stack span:nth-child(3) {
+  background-color: #5ccfee;
+}
+
+.table__cell a {
   color: var(--accent);
+  font-weight: 600;
 }
