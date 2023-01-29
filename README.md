@@ -17,9 +17,9 @@
 
 ##### ⚡️ Junior
 
-| **Tags**                                                                           | **Name** | **Description** | **Live**     | **Code**     |
-|------------------------------------------------------------------------------------|----------|-----------------|--------------|--------------|
-| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Name     | Description     | [**Live**]() | [**Code**]() |
+| **Tags**                                                                           | **Name**  | **Description**                         | **Live**                                                                             | **Code**                                                                                            |
+|------------------------------------------------------------------------------------|-----------|-----------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Countdown | Countdown, quick easy to use countdown. | [**Live**](https://npp-react-projects.vercel.app/projects/countdown/dist/index.html) | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/countdown/source) |
 
 ----
 
