@@ -1,58 +1,21 @@
 import { useState } from 'react';
-import { FiGithub } from 'react-icons/fi';
-import { Toaster } from 'react-hot-toast';
+import { getRandomNumber } from '../utils/getRandomNumber.js';
 import confetti from 'canvas-confetti';
-import { capitalStr } from './utils/capitalStr.js';
-import { getRandomNumber } from './utils/getRandomNumber.js';
-import mock from './mock/mock.js';
+import { capitalStr } from '../utils/capitalStr.js';
+import mock from '../mock/mock.js';
 
-/**
- * @component App - Main Component
- * @return {JSX.Element}
- * @constructor
- */
-const App = () => (
-  <>
-    <div className='npp'>
-      <div className='npp-app'>
-        <RockPaperScissors />
-        <Toaster position='bottom-center' />
-      </div>
-      <a className='npp-author' href='https://github.com/nagoev-alim' target='_blank'>
-        <FiGithub size={25} />
-      </a>
-    </div>
-  </>
-);
-
-export default App;
-
-
-/**
- * @function RockPaperScissors
- * @return {JSX.Element}
- * @constructor
- */
 const RockPaperScissors = () => {
-  // =====================
-  // 🚀 Hooks
-  // =====================
   const [scores, setScores] = useState({
     user: 0,
     computer: 0,
   });
   const [message, setMessage] = useState('Get Started, Let\'s Rock!');
   const [isEnd, setIsEnd] = useState(false);
-  // =====================
-  // 🚀 Methods
-  // =====================
-  /**
-   * @function gameMove - Choice step logic
-   * @param userChoice
-   */
+
+  // 🚀 METHODS: ===============================
+
   const gameMove = (userChoice) => {
     const computerChoice = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
-
     switch (`${computerChoice}-${userChoice}`) {
       case 'rock-paper':
       case 'paper-scissors':
@@ -74,14 +37,7 @@ const RockPaperScissors = () => {
     }
   };
 
-  /**
-   * @function optionGame - Game move option
-   * @param userChoice
-   * @param computerChoice
-   * @param type
-   */
   const optionGame = (userChoice, computerChoice, type) => {
-
     setScores(prevState => {
       let user = prevState.user;
       let computer = prevState.computer;
@@ -130,12 +86,9 @@ const RockPaperScissors = () => {
       ${capitalStr(computerChoice)} <span class='small ${type !== 'draw' ? 'lose' : 'equal'}'>(comp)</span>`);
   };
 
-  // =====================
-  // 🚀 Render
-  // =====================
-  return <>
-    <h1 className='title'>Rock Paper Scissors</h1>
-
+  // 🚀 RENDER: ================================
+  return <div className='game'>
+    <h1 className='title game__title'>Rock Paper Scissors</h1>
     <main>
       <div className='score'>
         <span className='score__label score__label--user'>user</span>
@@ -160,6 +113,8 @@ const RockPaperScissors = () => {
       {!isEnd && <p>Make your move.</p>}
       {isEnd && <button onClick={() => location.reload()}>Repeat Game</button>}
     </footer>
-  </>;
+
+  </div>;
 };
 
+export default RockPaperScissors;
