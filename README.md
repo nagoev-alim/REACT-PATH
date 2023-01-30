@@ -33,10 +33,11 @@
 
 ##### ⚡️ Junior
 
-| **Tags**                                                                           | **Name**  | **Description**                         | **Live**                                                                             | **Code**                                                                                            |
-|------------------------------------------------------------------------------------|-----------|-----------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Countdown | Countdown, quick easy to use countdown. | [**Live**](https://npp-react-projects.vercel.app/projects/countdown/dist/index.html) | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/countdown/source) |
-| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Quiz      | In this app, you can play a quiz.       | [**Live**](https://npp-quiz-react.vercel.app/)                                       | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/quiz/source)      |
+| **Tags**                                                                           | **Name**          | **Description**                                  | **Live**                                                                                     | **Code**                                                                                                    |
+|------------------------------------------------------------------------------------|-------------------|--------------------------------------------------|----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Countdown         | Countdown, quick easy to use countdown.          | [**Live**](https://npp-react-projects.vercel.app/projects/countdown/dist/index.html)         | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/countdown/source)         |
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Twitty Microposts | In this app, you can create, edit, delete posts. | [**Live**](https://npp-react-projects.vercel.app/projects/twitty-microposts/dist/index.html) | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/twitty-microposts/source) |
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Quiz              | In this app, you can play a quiz.                | [**Live**](https://npp-quiz-react.vercel.app/)                                               | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/quiz/source)              |
 
 ----
 
