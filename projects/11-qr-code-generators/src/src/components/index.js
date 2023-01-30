@@ -1,5 +1,0 @@
-export {default as QRCodeGenerator01} from './QRCodeGenerator01'
-export {default as QRCodeGenerator02} from './QRCodeGenerator02'
-export {default as QRCodeGenerator03} from './QRCodeGenerator03'
-export {default as QRCodeGenerator04} from './QRCodeGenerator04'
-export {default as QRCodeGenerator05} from './QRCodeGenerator05'
