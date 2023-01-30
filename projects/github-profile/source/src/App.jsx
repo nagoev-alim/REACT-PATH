@@ -1,12 +1,9 @@
 import { AppWrapper, GithubProfile } from './components/index.js';
-import { AppProvider } from './context/AppContext';
 
 const App = () => (
-  <AppProvider>
-    <AppWrapper>
-      <GithubProfile />
-    </AppWrapper>
-  </AppProvider>
+  <AppWrapper>
+    <GithubProfile />
+  </AppWrapper>
 );
 
 export default App;
