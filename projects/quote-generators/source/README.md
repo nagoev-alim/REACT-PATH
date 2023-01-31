@@ -1,6 +1,6 @@
-### 📦 Password Generator App
+### 📦 Quote Generators App
 
-In this app you can generate and copy random password.
+In this app you can generate and copy random quotes.
 
 ---
 

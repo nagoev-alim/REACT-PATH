@@ -1,46 +1,30 @@
-import { FiClipboard, FiGithub } from 'react-icons/fi';
-import { toast, Toaster } from 'react-hot-toast';
-import mock from './mock/mock.js';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
+import { FiClipboard } from 'react-icons/fi';
 import axios from 'axios';
 import { LineWobble } from '@uiball/loaders';
+import mock from '../mock/mock.js';
 
-const App = () => {
-  // =====================
-  // 🚀 Hooks
-  // =====================
+const QuoteGenerator = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  // =====================
-  // 🚀 Methods
-  // =====================
-  /**
-   * @function onSubmit - Form submit handler
-   * @param event
-   */
+  // 🚀 METHODS: ================================
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
     const source = Object.fromEntries(new FormData(form).entries()).source;
-
     if (!source) {
       toast.error('Please select source.');
       return;
     }
-
     await getQuote(source);
   };
 
-  /**
-   * @function getQuote - Get fetch from API
-   * @param source
-   * @returns {Promise<void>}
-   */
   const getQuote = async (source) => {
     try {
       setIsLoading(true);
-
       switch (source) {
         case 'https://api.chucknorris.io/jokes/random': {
           const { data: { value: text } } = await axios.get(source);
@@ -146,17 +130,15 @@ const App = () => {
         default:
           break;
       }
-
       setIsLoading(false);
     } catch (e) {
       console.log(e);
+      setIsLoading(false);
+      setData(null);
       toast.error('Something went wrong, maybe you need to give access for CORS.');
     }
   };
 
-  /**
-   * @function copyToClipboard - Copy to clipboard
-   */
   const copyToClipboard = () => {
     if (!data && data.text) return;
     const textarea = document.createElement('textarea');
@@ -168,39 +150,27 @@ const App = () => {
     toast.success('Success copied to clipboard.');
   };
 
-  // =====================
-  // 🚀 Render
-  // =====================
-  return <div className='npp'>
-    <div className='npp-app'>
+  // 🚀 RENDER: ================================
+  return <div className='quote-generator'>
+    <h1 className='title quote-generator__title'>Quote Generators</h1>
+    <form onSubmit={onSubmit}>
+      <select name='source'>
+        <option value=''>Select Source</option>
+        {mock.map(({ name, value }) => <option key={name} value={value}>{name}</option>)}
+      </select>
+      <button type='submit' className='button button--primary button--fluid'>Submit</button>
+    </form>
 
-      <div className='quote-generator'>
-        <h1 className='title'>Quote Generators</h1>
-        <form onSubmit={onSubmit}>
-          <select name='source'>
-            <option value=''>Select Source</option>
-            {mock.map(({ name, value }) => <option key={name} value={value}>{name}</option>)}
-          </select>
-          <button type='submit' className='button'>Submit</button>
-        </form>
+    {isLoading && <div className='loader'>
+      <LineWobble size={100} lineWeight={5} speed={1.75} color='black' />
+    </div>}
 
-        {isLoading && <div className='loader'>
-          <LineWobble size={100} lineWeight={5} speed={1.75} color='black' />
-        </div>}
-
-        {data && <div className='body'>
-          <button onClick={copyToClipboard}><FiClipboard size={25} /></button>
-          <p>"{data.text}"</p>
-          {data.author && <p className='author'>{data.author}</p>}
-        </div>}
-      </div>
-
-      <a className='npp-author' href='https://github.com/nagoev-alim' target='_blank'>
-        <FiGithub size={25} />
-      </a>
-      <Toaster position='bottom-center' />
-    </div>
+    {data && <div className='body'>
+      <button onClick={copyToClipboard}><FiClipboard size={25} /></button>
+      <p>"{data.text}"</p>
+      {data.author && <p className='author'>{data.author}</p>}
+    </div>}
   </div>;
 };
 
-export default App;
+export default QuoteGenerator;
