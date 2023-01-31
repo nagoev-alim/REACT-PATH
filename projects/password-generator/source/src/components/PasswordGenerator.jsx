@@ -1,7 +1,7 @@
-import { FiClipboard } from 'react-icons/all';
-import toast from 'react-hot-toast';
 import { useState } from 'react';
 import zxcvbn from 'zxcvbn';
+import toast from 'react-hot-toast';
+import { FiClipboard } from 'react-icons/fi';
 
 const MOCK = [
   {
@@ -29,19 +29,13 @@ const CHARACTERS = {
   symbols: () => '!@#$%^&*(){}[]=<>,.'[Math.floor(Math.random() * '!@#$%^&*(){}[]=<>,.'.length)],
 };
 
-const PasswordGenerator = ({ pwd, setPwd }) => {
-  // =====================
-  // 🚀 Hooks
-  // =====================
+const PasswordGenerator = () => {
+  const [pwd, setPwd] = useState(null);
   const [length, setLength] = useState(15);
   const [pwdStrong, setPwdStrong] = useState('default');
 
-  // =====================
-  // 🚀 Methods
-  // =====================
-  /**
-   * @function onGeneratePwd - Generate password
-   */
+  // 🚀 METHODS: ================================
+
   const onGeneratePwd = () => {
     let params = null;
     document.querySelectorAll('[data-option]').forEach(option => params = {
@@ -57,9 +51,6 @@ const PasswordGenerator = ({ pwd, setPwd }) => {
     setPwd({ password: generatePassword({ ...params, length }), length });
   };
 
-  /**
-   * @function generatePassword - Generate password
-   */
   const generatePassword = ({ lowercase, uppercase, numbers, symbols, length }) => {
     let result = '';
     const typesCount = lowercase + uppercase + numbers + symbols;
@@ -82,9 +73,6 @@ const PasswordGenerator = ({ pwd, setPwd }) => {
     return result.slice(0, length);
   };
 
-  /**
-   * @function copyPwd - Copy password to clipboard
-   */
   const copyPwd = () => {
     if (pwd === null) return;
     const textarea = document.createElement('textarea');
@@ -96,10 +84,10 @@ const PasswordGenerator = ({ pwd, setPwd }) => {
     toast.success('Password copied to clipboard.');
   };
 
-  // =====================
-  // 🚀 Render
-  // =====================
-  return <>
+  // 🚀 RENDER: ================================
+  return <div className='pwd-generator'>
+    <h1 className='title pwd-generator__title'>Password Generator</h1>
+
     <div className='result'>
       <input type='text' defaultValue={pwd ? pwd.password : null} readOnly={true} disabled />
       <button className='clipboard' onClick={copyPwd}><FiClipboard size={25} /></button>
@@ -126,8 +114,9 @@ const PasswordGenerator = ({ pwd, setPwd }) => {
         </li>,
       )}
     </ul>
-    <button className='button' onClick={onGeneratePwd}>Generate Password</button>
-  </>;
+    <button className='button button--fluid button--primary' onClick={onGeneratePwd}>Generate Password</button>
+
+  </div>;
 };
 
 export default PasswordGenerator;
