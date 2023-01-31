@@ -1,69 +1,32 @@
-import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { FiRepeat } from 'react-icons/all';
+import { useState } from 'react';
 import axios from 'axios';
+import { FiRepeat } from 'react-icons/all.js';
 import options from '../mock/mock.js';
+import { LineWobble } from '@uiball/loaders';
 
-/**
- * @function CurrencyConverter
- * @return {JSX.Element}
- * @constructor
- */
 const CurrencyConverter = () => {
-  // =====================
-  // 🚀 Hooks
-  // =====================
   const [fromSelect] = useState('USD');
   const [toSelect] = useState('RUB');
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        await fetchData(
-          document.querySelector('[type="number"]').value,
-          document.querySelector('[name="from"]').value,
-          document.querySelector('[name="to"]').value,
-        );
-      } catch (e) {
-        toast.error('Something went wrong, open dev console.');
-        console.log(e);
-      }
-    })();
-  }, []);
+  // 🚀 METHODS: ================================
 
-  // =====================
-  // 🚀 Methods
-  // =====================
-  /**
-   * @function onSubmit - Form submit handler
-   * @param event
-   */
   const onSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
     const { amount, to, from } = Object.fromEntries(new FormData(form).entries());
-
     if (amount.trim().length === 0 || !to || !from) {
       toast.error('Please fill the fields.');
       return;
     }
-
     await fetchData(amount, from, to);
   };
 
-  /**
-   * @function fetchData - Fetch data from API
-   * @param amount
-   * @param from
-   * @param to
-   * @returns {Promise<void>}
-   */
   const fetchData = async (amount, from, to) => {
     try {
       setIsLoading(true);
-
       const {
         data: {
           result,
@@ -72,25 +35,20 @@ const CurrencyConverter = () => {
           info: { rate },
         },
       } = await axios.get(`https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}`);
-
       if (!success) {
         toast.error('Something went wrong, open dev console.');
         return;
       }
-
       setData(() => ({ amount, from, to, result, date, rate }));
       setIsLoading(false);
     } catch (e) {
+      setIsLoading(false);
+      const [data, setData] = useState(null);
       console.log(e);
       toast.error('Something went wrong, open dev console.');
     }
   };
 
-  /**
-   * @function onChange - Select change event handler
-   * @param previousElementSibling
-   * @param value
-   */
   const onChange = ({ previousElementSibling, value }) => {
     try {
       previousElementSibling.src = `https://flagcdn.com/48x36/${options.find(({ label }) => label === value).value.toLowerCase()}.png`;
@@ -107,44 +65,36 @@ const CurrencyConverter = () => {
     }
   };
 
-  /**
-   * @function onSwitch - Switch currencies
-   */
   const onSwitch = async () => {
     const amount = document.querySelector('[type="number"]').value;
     const from = document.querySelector('[name="from"]');
     const to = document.querySelector('[name="to"]');
     const tmpCode = from.value;
     const tmpSrc = from.previousElementSibling.src;
-
     if (amount.trim().length === 0) {
       toast.error('Please fill the fields.');
       return;
     }
-
     from.value = to.value;
     to.value = tmpCode;
     from.previousElementSibling.src = to.previousElementSibling.src;
     to.previousElementSibling.src = tmpSrc;
-
     await fetchData(amount, from.value, to.value);
   };
 
-  // =====================
-  // 🚀 Render
-  // =====================
+  // 🚀 RENDER: ================================
   return <div className='currency-converter'>
-    <h1 className='title'>Currency Converter</h1>
+    <h1 className='title currency-converter__title'>Currency Converter</h1>
 
-    <form onSubmit={onSubmit}>
+    <form className='currency-converter__form' onSubmit={onSubmit}>
       <label>
         <span>Enter Amount</span>
         <input type='number' defaultValue='1' step='1' min='1' name='amount' />
       </label>
 
-      <div className='directions'>
+      <div className='currency-converter__directions'>
         <label>
-          <span className='label'>From</span>
+          <span>From</span>
           <div className='select'>
             <img src='https://flagcdn.com/48x36/us.png' alt='flag' />
             <select name='from' onChange={({ target }) => onChange(target)} defaultValue={fromSelect}>
@@ -164,10 +114,11 @@ const CurrencyConverter = () => {
         </label>
       </div>
 
-      <div className='exchange'>
-        {isLoading && <p>Getting exchange rate...</p>}
-
-        {data !== null && !isLoading && <table>
+      {isLoading && <div className='loader'>
+        <LineWobble size={100} lineWeight={5} speed={1.75} color='black' />
+      </div>}
+      {data && !isLoading && <div className='currency-converter__exchange'>
+        <table>
           <tbody>
           <tr>
             <td><span>Date</span></td>
@@ -182,11 +133,13 @@ const CurrencyConverter = () => {
             <td><span>{data.amount}</span> ${data.from} = <span>{data.result}</span> {data.to}</td>
           </tr>
           </tbody>
-        </table>}
+        </table>
       </div>
+      }
 
-      <button type='submit'>Get Exchange Rate</button>
+      <button className='button button--fluid button--primary' type='submit'>Get Exchange Rate</button>
     </form>
+
   </div>;
 };
 
