@@ -1,11 +1,3 @@
-/**
- * @function Pagination
- * @param paginate
- * @param perPageCount
- * @param totalPosts
- * @return {JSX.Element}
- * @constructor
- */
 const Pagination = ({ currentPage, paginate, perPageCount, totalUsers }) => {
   const pageNumbers = [];
 
@@ -13,9 +5,10 @@ const Pagination = ({ currentPage, paginate, perPageCount, totalUsers }) => {
     pageNumbers.push(i);
   }
 
+  // 🚀 RENDER: ================================
   return <ul className='pagination'>
     <li>
-      <button disabled={currentPage === pageNumbers[0]}  onClick={() => {
+      <button className='button' disabled={currentPage === pageNumbers[0]}  onClick={() => {
         if (currentPage !== 0) paginate(currentPage -= 1);
       }}>Prev
       </button>
@@ -23,13 +16,13 @@ const Pagination = ({ currentPage, paginate, perPageCount, totalUsers }) => {
 
     {pageNumbers.map((number) => (
       <li key={number}>
-        <button className={`${number === currentPage ? 'active' : ''}`}
+        <button className={`button ${number === currentPage ? 'button--primary' : ''}`}
                 onClick={() => paginate(number)}>{number}</button>
       </li>
     ))}
 
     <li>
-      <button disabled={currentPage === pageNumbers.length} onClick={() => {
+      <button className='button' disabled={currentPage === pageNumbers.length} onClick={() => {
         if (currentPage <= pageNumbers.length - 1) paginate(currentPage += 1);
       }}>Next
       </button>
