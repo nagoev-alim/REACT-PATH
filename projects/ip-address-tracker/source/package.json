@@ -10,12 +10,13 @@
   },
   "dependencies": {
     "@uiball/loaders": "^1.2.6",
-    "leaflet": "^1.9.3",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
-    "react-leaflet": "^4.2.0"
+    "react-leaflet": "^4.2.0",
+    "react-router-dom": "^6.8.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
