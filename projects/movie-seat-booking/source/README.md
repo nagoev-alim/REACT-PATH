@@ -12,7 +12,7 @@ Display movie choices and seats in a theater to select from in order to purchase
 
 #### 🌄 Preview:
 
-![App Screenshot](src/assets/images/preview/preview.png)
+![App Screenshot](src/assets/images/preview/1.png)
 
 -----
 

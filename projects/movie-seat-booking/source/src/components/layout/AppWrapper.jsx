@@ -10,8 +10,8 @@ const AppWrapper = ({ children }) => (
       <a className='npp-author' href='https://github.com/nagoev-alim' target='_blank'>
         <FiGithub size={25} />
       </a>
-      <Toaster position='bottom-center' />
     </div>
+    <Toaster position='bottom-center' />
   </div>
 );
 

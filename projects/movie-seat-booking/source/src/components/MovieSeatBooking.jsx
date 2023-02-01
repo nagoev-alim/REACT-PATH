@@ -8,7 +8,7 @@ const MovieSeatBooking = () => {
     { id: 9, name: 'Sing Street' },
   ]);
   const [selected, setSelected] = useState(localStorage.getItem('movieIndex') || 1);
-  const [ticketPrice, setTicketPrice] = useState(mock[1].id);
+  const [ticketPrice, setTicketPrice] = useState(mock[selected].id);
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalPicked, setTotalPicked] = useState(0);
 
@@ -18,38 +18,26 @@ const MovieSeatBooking = () => {
   }, []);
 
   // 🚀 METHODS: ================================
-  /**
-   * @function storageGetData - Get and display data from localstorage
-   */
   const storageGetData = () => {
     const selectedSeats = JSON.parse(localStorage.getItem('seats'));
-
     if (selectedSeats !== null && selectedSeats.length > 0) {
       document.querySelectorAll('.row .seat:not(.occupied)').forEach((seat, index) => {
         if (selectedSeats.indexOf(index) > -1) seat.classList.add('selected');
       });
     }
+    setTicketPrice(mock[selected].id)
   };
 
-  /**
-   * @function updateSelected - Update selected seats
-   */
   const updateSelected = () => {
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
     const noteSelectedSeats = document.querySelectorAll('.row .seat:not(.occupied)');
     localStorage.setItem('seats', JSON.stringify([...selectedSeats].map(seat => [...noteSelectedSeats].indexOf(seat))));
-
     const totalPicked = selectedSeats.length;
     const totalPrice = totalPicked * ticketPrice;
-
     setTotalPicked(totalPicked);
     setTotalPrice(totalPrice);
   };
 
-  /**
-   * @function onSeatClick - Seat click handler
-   * @param target
-   */
   const onSeatClick = ({ target }) => {
     if (!target.classList.contains('occupied')) {
       target.classList.toggle('selected');
@@ -57,10 +45,6 @@ const MovieSeatBooking = () => {
     }
   };
 
-  /**
-   * @function onChange - Select change handler
-   * @param target
-   */
   const onChange = ({ target }) => {
     setSelected(Number(target.value));
     setTicketPrice(() => {
@@ -74,7 +58,7 @@ const MovieSeatBooking = () => {
 
   // 🚀 RENDER: ================================
   return <div className='booking'>
-    <h1 className='title'>Movie Seat Booking</h1>
+    <h1 className='title booking__title'>Movie Seat Booking</h1>
     <label>
       <span>Pick a movie:</span>
       <select value={selected} onChange={onChange}>
