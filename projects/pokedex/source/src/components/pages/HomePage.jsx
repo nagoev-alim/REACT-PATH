@@ -1,8 +1,7 @@
-import { FiGithub } from 'react-icons/fi';
-import { toast, Toaster } from 'react-hot-toast';
-import { Pagination, Pokedex } from './components/index.js';
+import { List, Pagination } from '../index.js';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 const COLORS = {
   fire: '#FDDFDF',
@@ -21,10 +20,9 @@ const COLORS = {
   normal: '#F5F5F5',
 };
 
-const App = () => {
-  // =====================
-  // 🚀 Hooks
-  // =====================
+const LIMIT = 30
+
+const HomePage = () => {
   const [data, setData] = useState(localStorage.getItem('pokedex') ? JSON.parse(localStorage.getItem('pokedex')) : []);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -36,7 +34,7 @@ const App = () => {
         if (data.length === 0) {
           setLoading(true);
 
-          for (let i = 1; i < 50; i++) {
+          for (let i = 1; i < LIMIT; i++) {
             const { data: { id, name, types } } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`);
             const pokemonTypes = types.map(({ type: { name } }) => name);
 
@@ -64,28 +62,14 @@ const App = () => {
     })();
   }, []);
 
-  // =====================
-  // 🚀 Render
-  // =====================
-  return <div className='npp'>
-    <div className='npp-app'>
-      <div className='custom-pagination'>
-        <h1 className='title'>Pokedex</h1>
-        <Pokedex pokemons={data.slice(currentPage * perPageCount - perPageCount, currentPage * perPageCount)}
-                 loading={loading} />
-        {!loading && <Pagination
-          currentPage={currentPage}
-          total={50}
-          limit={10}
-          onPageChange={(page) => setCurrentPage(page)}
-        />}
-      </div>
-    </div>
-    <a className='npp-author' href='https://github.com/nagoev-alim' target='_blank'>
-      <FiGithub size={25} />
-    </a>
-    <Toaster position='bottom-center' />
-  </div>;
+  // 🚀 RENDER: ================================
+  return <>
+    <List pokemons={data.slice(currentPage * perPageCount - perPageCount, currentPage * perPageCount)}
+          loading={loading} />
+    {!loading &&
+      <Pagination currentPage={currentPage} total={LIMIT} limit={10} onPageChange={(page) => setCurrentPage(page)}
+      />}
+  </>;
 };
 
-export default App;
+export default HomePage;

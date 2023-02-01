@@ -1,22 +1,9 @@
 import classNames from 'classnames';
 
-/**
- * @function range
- * @param start
- * @param end
- * @return {unknown[]}
- */
 const range = (start, end) => {
   return [...Array(end - start).keys()].map((el) => el + start);
 };
 
-/**
- * @function getPagesCut
- * @param pagesCount
- * @param pagesCutCount
- * @param currentPage
- * @return {{start: number, end: *}}
- */
 const getPagesCut = ({ pagesCount, pagesCutCount, currentPage }) => {
   const ceiling = Math.ceil(pagesCutCount / 2);
   const floor = Math.floor(pagesCutCount / 2);
@@ -32,35 +19,20 @@ const getPagesCut = ({ pagesCount, pagesCutCount, currentPage }) => {
   }
 };
 
-/**
- * @function PaginationItem
- * @param page
- * @param currentPage
- * @param onPageChange
- * @param isDisabled
- * @return {JSX.Element}
- * @constructor
- */
 const PaginationItem = ({ page, currentPage, onPageChange, isDisabled }) => {
   const liClasses = classNames({
     'page-item': true,
     active: page === currentPage,
     disabled: isDisabled,
   });
-  return <li className={liClasses} onClick={() => onPageChange(page)}>
-    <span className='page-link'>{page}</span>
+  return <li>
+    <button className={`button ${liClasses.includes('active') ? 'button--primary' : ''} `}
+            onClick={() => onPageChange(page)}
+            disabled={liClasses.includes('disabled')}
+    >{page}</button>
   </li>;
 };
 
-/**
- * @function Pagination
- * @param currentPage
- * @param total
- * @param limit
- * @param onPageChange
- * @return {JSX.Element}
- * @constructor
- */
 const Pagination = ({ currentPage, total, limit, onPageChange }) => {
   const pagesCount = Math.ceil(total / limit);
   const pagesCut = getPagesCut({ pagesCount, pagesCutCount: 5, currentPage });
