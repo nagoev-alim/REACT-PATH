@@ -1,17 +1,9 @@
 import { useCallback, useEffect, useState } from 'react';
-import { FiGithub } from 'react-icons/fi';
-import { toast, Toaster } from 'react-hot-toast';
+import { toast } from 'react-hot-toast';
 
 const synth = window.speechSynthesis;
-/**
- * @function App - Main Component
- * @return {JSX.Element}
- * @constructor
- */
-const App = () => {
-  // =====================
-  // 🚀 Hooks
-  // =====================
+
+const TTS = () => {
   const [selectedVoice, setSelectedVoice] = useState(0);
   const [btnLabel, setBtnLabel] = useState('Convert To Speech');
   const [speaking, setSpeaking] = useState(true);
@@ -20,9 +12,7 @@ const App = () => {
     return <span>Aw... your browser does not support Speech Synthesis</span>;
   }
 
-  // =====================
-  // 🚀 Methods
-  // =====================
+  // 🚀 METHODS: ================================
   const onSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -62,46 +52,26 @@ const App = () => {
     }
   };
 
-  // =====================
-  // 🚀 Render
-  // =====================
-  return <div className='npp'>
-    <div className='npp-app'>
-
-      <div className='tts'>
-        <h1 className='title'>Text To Speech</h1>
-
-        <form onSubmit={onSubmit}>
-          <label>
-            <span>Enter Text</span>
-            <textarea name='text'></textarea>
-          </label>
-          <label>
-            <span>Select Voice</span>
-            <VoiceSelector selected={selectedVoice} setSelected={setSelectedVoice} />
-          </label>
-          <button className='button'>{btnLabel}</button>
-        </form>
-      </div>
-
-      <a className='npp-author' href='https://github.com/nagoev-alim' target='_blank'>
-        <FiGithub size={25} />
-      </a>
-      <Toaster position='bottom-center' />
-    </div>
+  // 🚀 RENDER: ================================
+  return <div className='tts'>
+    <h1 className='title tts__title'>TTS</h1>
+    <form onSubmit={onSubmit}>
+      <label>
+        <span>Enter Text</span>
+        <textarea name='text'></textarea>
+      </label>
+      <label>
+        <span>Select Voice</span>
+        <VoiceSelector selected={selectedVoice} setSelected={setSelectedVoice} />
+      </label>
+      <button className='button button--fluid button--green'>{btnLabel}</button>
+    </form>
   </div>;
 };
 
-/**
- * @function VoiceSelector
- * @param selected
- * @param setSelected
- * @return {JSX.Element}
- * @constructor
- */
+
 const VoiceSelector = ({ selected = 0, setSelected }) => {
   const [voices, setVoices] = useState([]);
-
   const populateVoiceList = useCallback(() => {
     const newVoices = synth.getVoices();
     setVoices(newVoices);
@@ -114,6 +84,7 @@ const VoiceSelector = ({ selected = 0, setSelected }) => {
     }
   }, [populateVoiceList]);
 
+  // 🚀 RENDER: ================================
   return <select
     value={selected}
     onChange={({ target: value }) => setSelected(Number(value))}
@@ -126,5 +97,4 @@ const VoiceSelector = ({ selected = 0, setSelected }) => {
   </select>;
 };
 
-
-export default App;
+export default TTS;
