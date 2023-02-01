@@ -6,7 +6,7 @@ In this app you can save the text as different files like `TXT`, `HTML`, `JS`, `
 
 #### 🌄 Preview:
 
-![App Screenshot](src/assets/images/preview/preview.png)
+![App Screenshot](src/assets/images/preview/1.png)
 
 -----
 

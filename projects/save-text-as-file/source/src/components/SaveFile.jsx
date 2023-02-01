@@ -16,18 +16,11 @@ const SaveFile = () => {
   const [name, setName] = useState('');
 
   // 🚀 METHODS: ================================
-  /**
-   * @function onSelect - Select change event handler
-   * @param value
-   */
   const onSelect = ({ target: { value } }) => {
     setBtnLabel(`${mock.find(item => item.value === value).label.split(' ')[0]}`);
     setSelected(value);
   };
 
-  /**
-   * @function onSubmit - Save file
-   */
   const onSubmit = () => {
     if (name.length === 0) {
       toast.error('Please fill a text field.');
@@ -43,21 +36,21 @@ const SaveFile = () => {
 
   // 🚀 RENDER: ================================
   return <div className='saver'>
-    <h1 className='title'>Save Text As File</h1>
+    <h1 className='title saver__title'>Save Text As File</h1>
     <textarea spellCheck='false' placeholder='Enter something to save' value={text}
               onChange={({ target: { value } }) => setText(value)} />
     <label>
-      <span className='label'>File name</span>
+      <span>File name</span>
       <input type='text' placeholder='Enter file name' value={name}
              onChange={({ target: { value } }) => setName(value)} />
     </label>
     <label>
-      <span className='label'>Save as</span>
+      <span>Save as</span>
       <select value={selected} onChange={onSelect}>
         {mock.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}
       </select>
     </label>
-    <button className='button' onClick={onSubmit}>Save As {btnLabel} File</button>
+    <button className='button button--green button--fluid' onClick={onSubmit}>Save As {btnLabel} File</button>
   </div>;
 };
 

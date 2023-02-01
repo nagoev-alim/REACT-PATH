@@ -72,6 +72,7 @@ select {
   border-radius: 4px;
   transition: all 0.3s ease;
   cursor: pointer;
+  background-color: rgba(230, 232,235,0.5);
 
   &::placeholder {
     color: rgba(51, 51, 51, 0.55);
@@ -94,11 +95,13 @@ svg {
 }
 
 .visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
