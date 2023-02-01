@@ -58,6 +58,7 @@
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | IP Address Tracker | In this app you can get information about IP address.        | [**Live**](https://npp-react-projects.vercel.app/projects/ip-address-tracker/dist/index.html)   | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/ip-address-tracker/source)   |
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | ZipCode Finder     | In this app you can get information about place use zipcode. | [**Live**](https://npp-react-projects.vercel.app/projects/zipcode-finder/dist/index.html)       | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/zipcode-finder/source)       |
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Meal Finder        | Search and generate random meals.                            | [**Live**](https://npp-meal-finder-react.vercel.app/)                                           | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/meal-finder/source)          |
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Sortable Table     | In this app you can sort a table with data.                  | [**Live**](https://npp-react-projects.vercel.app/projects/sortable-table/dist/index.html)       | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/sortable-table/source)       |
 
 ----
 
