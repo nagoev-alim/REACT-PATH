@@ -67,9 +67,9 @@
 
 ##### ⚡️ Intermediate
 
-| **Tags**                                                                           | **Name** | **Description** | **Live**     | **Code**     |
-|------------------------------------------------------------------------------------|----------|-----------------|--------------|--------------|
-| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Name     | Description     | [**Live**]() | [**Code**]() |
+| **Tags**                                                                           | **Name**       | **Description**                                         | **Live**                                                 | **Code**                                                            |
+|------------------------------------------------------------------------------------|----------------|---------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------------------|
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | REST Countries | In this app you can search information about countries. | [**Live**](https://npp-rest-countries-react.vercel.app/) | [**Code**](https://github.com/nagoev-alim/npp-rest-countries-react) |
 
 ----
 
