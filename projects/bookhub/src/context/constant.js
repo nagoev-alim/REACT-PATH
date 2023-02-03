@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://openlibrary.org/search.json?title=';
+export const BASE_URL = 'https://openlibrary.org/search.json?title=';
 export const BASE_SINGLE_URL = 'https://openlibrary.org/works/';
 export const FETCH_BOOKS = 'FETCH_BOOKS';
 export const FETCH_BOOK = 'FETCH_BOOK';
