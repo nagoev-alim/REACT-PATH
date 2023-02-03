@@ -62,6 +62,7 @@
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Sortable Table          | In this app you can sort a table with data.                  | [**Live**](https://npp-react-projects.vercel.app/projects/sortable-table/dist/index.html)       | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/sortable-table/source)       |
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Sortable Table (Second) | In this app you can sort a table with data.                  | [**Live**](https://npp-react-projects.vercel.app/projects/sortable-table-02/dist/index.html)    | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/sortable-table-02/source)    |
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | BookHub                 | In this app you can search and store books.                  | [**Live**](https://npp-bookhub-react.vercel.app/)                                               | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/bookhub)                     |
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Feedback                | In this app you can create, update, delete feedback.         | [**Live**](https://npp-react-projects.vercel.app/projects/feedback/dist/index.html)             | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/feedback/source)             |
 
 ----
 
