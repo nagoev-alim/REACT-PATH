@@ -64,6 +64,7 @@
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | BookHub                 | In this app you can search and store books.                  | [**Live**](https://npp-bookhub-react.vercel.app/)                                               | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/bookhub)                     |
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Feedback                | In this app you can create, update, delete feedback.         | [**Live**](https://npp-react-projects.vercel.app/projects/feedback/dist/index.html)             | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/feedback/source)             |
 | <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Shopping Cart (01)      | Shopping Cart Example.                                       | [**Live**](https://npp-react-projects.vercel.app/projects/shopping-cart-01/dist/index.html)     | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/shopping-cart-01/source)     |
+| <img width="80" src="https://skillicons.dev/icons?i=html,css,react"  alt="Stack"/> | Shopping Cart (02)      | Shopping Cart Example.                                       | [**Live**](https://npp-react-projects.vercel.app/projects/shopping-cart-02/dist/index.html)     | [**Code**](https://github.com/nagoev-alim/npp-react-projects/tree/master/projects/shopping-cart-02/source)     |
 
 ----
 
