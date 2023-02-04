@@ -1,0 +1,6 @@
+.about {
+  background-color: var(--clr-white);
+  padding: 10px;
+  border: var(--theme-border);
+  border-radius: var(--theme-border-radius);
+}

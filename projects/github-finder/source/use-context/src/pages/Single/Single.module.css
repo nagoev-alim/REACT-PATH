@@ -1,0 +1,150 @@
+.single {
+  display: flex;
+  flex-direction: column;
+  gap: var(--theme-gap);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--theme-gap);
+
+  :global {
+    .top {
+      display: grid;
+      gap: var(--theme-gap);
+      justify-items: center;
+      text-align: center;
+      align-items: flex-start;
+
+      @media (min-width: 576px) {
+        grid-template-columns: 1fr 3fr;
+      }
+
+      @media (min-width: 768px) {
+        gap: 30px;
+        grid-template-columns: 2fr 3fr;
+      }
+
+      img {
+        border-radius: 50%;
+        overflow: hidden;
+        max-width: 300px;
+
+        @media (min-width: 576px) {
+          max-width: 100%;
+        }
+      }
+
+      .column {
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+
+        @media (min-width: 576px) {
+          display: grid;
+          gap: 5px;
+          justify-items: flex-start;
+          text-align: left;
+        }
+      }
+
+      .links {
+        display: grid;
+        gap: 10px;
+
+        .button {
+          margin-inline: auto;
+
+          @media (min-width: 576px) {
+            margin-left: 0;
+          }
+        }
+
+        p {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.stats {
+  display: grid;
+  gap: var(--theme-gap);
+  align-items: flex-start;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  li {
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    &:nth-child(1) {
+      background-color: #3abff7;
+    }
+
+    &:nth-child(2) {
+      background-color: #37d39a;
+    }
+
+    &:nth-child(3) {
+      background-color: #f97272;
+    }
+
+    &:nth-child(4) {
+      background-color: #fabe23;
+    }
+  }
+}
+
+.repos {
+  display: grid;
+  gap: var(--theme-gap);
+  align-items: flex-start;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.repos_item {
+  background-color: var(--clr-white);
+  border: var(--theme-border);
+  padding: 10px;
+  border-radius: 10px;
+  display: grid;
+  gap: 10px;
+
+  :global {
+    .link {
+      font-weight: 600;
+      color: var(--clr-blue);
+    }
+
+    .list {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      li {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    }
+  }
+}

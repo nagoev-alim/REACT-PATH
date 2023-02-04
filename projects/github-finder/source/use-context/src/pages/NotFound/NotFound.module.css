@@ -1,0 +1,9 @@
+.not_found {
+  display: grid;
+  place-items: center;
+  gap: var(--theme-gap);
+  background-color: var(--clr-white);
+  padding: 40px 10px;
+  border: var(--theme-border);
+  border-radius: var(--theme-border-radius);
+}

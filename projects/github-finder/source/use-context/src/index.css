@@ -1,0 +1,229 @@
+@import "css/base/reset.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Font Family */
+  --font-sans: 'Poppins', 'Work Sans', 'Quicksand', 'DM Sans', 'IBM Plex Sans', 'Rubik', "Google Sans", system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
+
+  /* Colors */
+  --clr-white: #fff;
+  --clr-black: #333;
+  --clr-red: #fc5859;
+  --clr-blue: #577ffb;
+  --clr-green: #42a05b;
+
+  /* Sizes */
+  --maximumViewportWidth: 1440;
+  --step-0: clamp(1rem, 2vw + 1rem, 1rem); /* 16 - 16 */
+  --step-1: clamp(1rem, 2vw + 1rem, 1.25rem); /* 16 - 20 */
+  --step-2: clamp(1.25rem, 2vw + 1rem, 1.563rem); /* 20 - 25 */
+  --step-3: clamp(1.563rem, 2vw + 1rem, 1.953rem); /* 25 - 31.25 */
+  --step-4: clamp(1.953rem, 2vw + 1rem, 2.441rem); /* 31.25 - 39.06 */
+  --step-5: clamp(2.441rem, 2vw + 1rem, 3.052rem); /* 39.06 - 48.83 */
+
+  /* Theme */
+  --theme-font-weight: 400;
+  --theme-font-family: var(--font-sans);
+  --theme-base-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 0px, rgb(0 0 0 / 10%) 0px 0px 1px 0px;
+  --theme-body-background: #EFEFEF;
+  --theme-body-color: hsl(200deg 9.68% 12.16%);
+  --theme-border-color: hsl(185.45deg 18.03% 88.04%);
+  --theme-border: 2px solid var(--theme-border-color);
+  --theme-border-radius: 10px;
+  --theme-gap: 15px;
+
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
+}
+
+h6,
+.h6 {
+  font-size: var(--step-0);
+}
+
+h5,
+.h5 {
+  font-size: var(--step-1);
+}
+
+h4,
+.h4 {
+  font-size: var(--step-2);
+}
+
+h3,
+.h3 {
+  font-size: var(--step-3);
+}
+
+h2,
+.h2 {
+  font-size: var(--step-4);
+}
+
+h1,
+.h1 {
+  font-size: var(--step-5);
+}
+
+.npp {
+  /* Fonts */
+  font-family: var(--theme-font-family);
+  font-weight: var(--theme-font-weight);
+  /* Colors */
+  background-color: var(--theme-body-background, #fff);
+  color: var(--theme-body-color, #333);
+  /* Sizes */
+  width: 100%;
+  min-height: 100vh;
+  /* Display */
+
+  &-author {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &-app {
+    width: 100%;
+  }
+
+  .title {
+    font-size: var(--step-4);
+    text-align: center;
+  }
+
+  .button {
+    background-color: #FAFBFC;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    cursor: pointer;
+    padding: 6px 16px;
+    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    word-wrap: break-word;
+    appearance: none;
+    max-width: max-content;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #F3F4F6;
+      text-decoration: none;
+      transition-duration: 0.1s;
+    }
+
+    &:disabled {
+      background-color: #FAFBFC;
+      border-color: rgba(27, 31, 35, 0.15);
+      color: #959DA5;
+      cursor: default;
+    }
+
+    &:active {
+      background-color: #EDEFF2;
+      box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+      transition: none 0s;
+    }
+
+    &:focus {
+      outline: 1px transparent;
+    }
+
+    &--red {
+      background-color: #fdd8e5;
+      color: #f31260;
+      border-color: #f31260;
+
+      &:hover {
+        background-color: #f5c5d6;
+      }
+    }
+
+    &--blue {
+      background-color: #cee4fe;
+      color: #0072f5;
+      border-color: #0072f5;
+
+      &:hover {
+        background-color: #c3dcfa;
+      }
+    }
+
+    &--green {
+      background-color: #DAFBE8;
+      color: #13A452;
+      border-color: #13A452;
+
+      &:hover {
+        background-color: #cdf8df;
+      }
+    }
+
+    &--primary {
+      background-color: #222222;
+      color: #fff;
+      border-color: #222222;
+
+      &:hover {
+        background-color: #2c343f;
+      }
+    }
+
+    &--fluid {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &:disabled {
+      pointer-events: none;
+    }
+  }
+
+  .loader,
+  .loader {
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+    padding: 20px 10px;
+
+    div::before {
+      background-color: var(--clr-black);
+    }
+  }
+
+  .error {
+    display: grid;
+    place-items: center;
+  }
+}
+
+/* ======================
+APP STYLES
+====================== */
+.gh {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: auto minmax(1px, 1170px) auto;
+  padding: 30px 15px;
+
+  &__container {
+    grid-column: 2/3;
+  }
+}

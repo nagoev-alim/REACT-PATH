@@ -1,0 +1,44 @@
+.header {
+  background-color: var(--clr-white);
+  padding: 20px 15px;
+  border-bottom: var(--theme-border);
+  display: grid;
+  grid-template-columns: auto minmax(1px, 1170px) auto;
+}
+
+.nav {
+  grid-column: 2/3;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+
+  @media (min-width: 576px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--theme-gap);
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+
+  :global {
+    .active {
+      color: var(--clr-blue);
+    }
+  }
+}
+
