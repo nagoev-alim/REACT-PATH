@@ -1,0 +1,14 @@
+.form {
+  padding: 20px;
+  border-radius: var(--theme-border-radius);
+  border: var(--theme-border);
+  background-color: var(--clr-white);
+
+  @media (min-width: 576px) {
+    grid-template-columns: 1fr 0.2fr;
+  }
+}
+
+.title {
+  grid-column: 1/-1;
+}

@@ -1,0 +1,17 @@
+.categories {
+  padding: 20px;
+  border-radius: var(--theme-border-radius);
+  border: var(--theme-border);
+  background-color: var(--clr-white);
+  display: grid;
+  gap: var(--theme-gap);
+
+  :global {
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--theme-gap);
+    }
+  }
+}
