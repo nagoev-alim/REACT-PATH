@@ -31,5 +31,6 @@
 | `Alarm Clock`        | [Код](projects/05-alarm-clock)                                 |
 | `Characters Counter` | [Код](projects/06-characters-counter)                          |
 | `Detect Pressed Key` | [Код](projects/07-detect-pressed-key)                          |
+| `Guess Number`       | [Код](projects/08-guess-number)                                |
 
 ![Превью](preview.jpg)
