@@ -30,5 +30,6 @@
 | `Countdown`          | [Код](projects/04-countdown)                                   |
 | `Alarm Clock`        | [Код](projects/05-alarm-clock)                                 |
 | `Characters Counter` | [Код](projects/06-characters-counter)                          |
+| `Detect Pressed Key` | [Код](projects/07-detect-pressed-key)                          |
 
 ![Превью](preview.jpg)
