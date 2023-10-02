@@ -31,9 +31,11 @@
 | `Alarm Clock`         | [Код](projects/05-alarm-clock)                                 |
 | `Characters Counter`  | [Код](projects/06-characters-counter)                          |
 | `Detect Pressed Key`  | [Код](projects/07-detect-pressed-key)                          |
-| `Guess Number`        | [Код](projects/08-guess-number)                                |
-| `Guess Number`        | [Код](projects/09-guess-number)                                |
+| `Guess Number Game`   | [Код](projects/08-guess-number)                                |
+| `Guess Number Game`   | [Код](projects/09-guess-number)                                |
 | `Rock Paper Scissors` | [Код](projects/10-rock-paper-scissor)                          |
 | `Word Scramble Game`  | [Код](projects/11-word-scramble-game)                          |
+| `Memory Card Game`    | [Код](projects/11-word-scramble-game)                          |
+| `Modal Window`        | [Код](projects/13-modal-window)                                |
 
 ![Превью](preview.jpg)
