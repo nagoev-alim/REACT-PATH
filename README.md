@@ -22,16 +22,17 @@
 
 ### 🚀 **Список пет-проектов:**
 
-| Название             | <img width='30' src="https://skillicons.dev/icons?i=github" /> |
-|:---------------------|:---------------------------------------------------------------|
-| `Counter`            | [Код](projects/01-counter)                                     |
-| `Stopwatch`          | [Код](projects/02-stopwatch)                                   |
-| `Timer`              | [Код](projects/03-timer)                                       |
-| `Countdown`          | [Код](projects/04-countdown)                                   |
-| `Alarm Clock`        | [Код](projects/05-alarm-clock)                                 |
-| `Characters Counter` | [Код](projects/06-characters-counter)                          |
-| `Detect Pressed Key` | [Код](projects/07-detect-pressed-key)                          |
-| `Guess Number`       | [Код](projects/08-guess-number)                                |
-| `Guess Number`       | [Код](projects/09-guess-number)                                |
+| Название              | <img width='30' src="https://skillicons.dev/icons?i=github" /> |
+|:----------------------|:---------------------------------------------------------------|
+| `Counter`             | [Код](projects/01-counter)                                     |
+| `Stopwatch`           | [Код](projects/02-stopwatch)                                   |
+| `Timer`               | [Код](projects/03-timer)                                       |
+| `Countdown`           | [Код](projects/04-countdown)                                   |
+| `Alarm Clock`         | [Код](projects/05-alarm-clock)                                 |
+| `Characters Counter`  | [Код](projects/06-characters-counter)                          |
+| `Detect Pressed Key`  | [Код](projects/07-detect-pressed-key)                          |
+| `Guess Number`        | [Код](projects/08-guess-number)                                |
+| `Guess Number`        | [Код](projects/09-guess-number)                                |
+| `Rock Paper Scissors` | [Код](projects/10-rock-paper-scissor)                          |
 
 ![Превью](preview.jpg)
