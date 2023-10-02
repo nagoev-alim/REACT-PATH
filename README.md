@@ -32,5 +32,6 @@
 | `Characters Counter` | [Код](projects/06-characters-counter)                          |
 | `Detect Pressed Key` | [Код](projects/07-detect-pressed-key)                          |
 | `Guess Number`       | [Код](projects/08-guess-number)                                |
+| `Guess Number`       | [Код](projects/09-guess-number)                                |
 
 ![Превью](preview.jpg)
