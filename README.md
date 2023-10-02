@@ -34,5 +34,6 @@
 | `Guess Number`        | [Код](projects/08-guess-number)                                |
 | `Guess Number`        | [Код](projects/09-guess-number)                                |
 | `Rock Paper Scissors` | [Код](projects/10-rock-paper-scissor)                          |
+| `Word Scramble Game`  | [Код](projects/11-word-scramble-game)                          |
 
 ![Превью](preview.jpg)
