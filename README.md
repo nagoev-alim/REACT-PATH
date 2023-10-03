@@ -40,5 +40,6 @@
 | `QR Code Generator`   | [Код](projects/14-qr-code-generator)                           |
 | `QR Code Reader`      | [Код](projects/15-qr-code-reader)                              |
 | `Simple Converters`   | [Код](projects/16-simple-converters)                           |
+| `Currency Converter`  | [Код](projects/17-currency-converter)                          |
 
 ![Превью](preview.jpg)
