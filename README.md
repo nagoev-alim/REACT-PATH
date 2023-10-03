@@ -37,5 +37,6 @@
 | `Word Scramble Game`  | [Код](projects/11-word-scramble-game)                          |
 | `Memory Card Game`    | [Код](projects/11-word-scramble-game)                          |
 | `Modal Window`        | [Код](projects/13-modal-window)                                |
+| `QR Code Generator`   | [Код](projects/14-qr-code-generator)                           |
 
 ![Превью](preview.jpg)
