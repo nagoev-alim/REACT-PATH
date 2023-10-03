@@ -41,5 +41,6 @@
 | `QR Code Reader`      | [Код](projects/15-qr-code-reader)                              |
 | `Simple Converters`   | [Код](projects/16-simple-converters)                           |
 | `Currency Converter`  | [Код](projects/17-currency-converter)                          |
+| `Expense Tracker`     | [Код](projects/18-expense-tracker)                             |
 
 ![Превью](preview.jpg)
