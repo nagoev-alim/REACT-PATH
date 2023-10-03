@@ -39,5 +39,6 @@
 | `Modal Window`        | [Код](projects/13-modal-window)                                |
 | `QR Code Generator`   | [Код](projects/14-qr-code-generator)                           |
 | `QR Code Reader`      | [Код](projects/15-qr-code-reader)                              |
+| `Simple Converters`   | [Код](projects/15-qr-code-reader)                              |
 
 ![Превью](preview.jpg)
