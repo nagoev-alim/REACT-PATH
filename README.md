@@ -45,5 +45,6 @@
 | `Pagination`          | [Код](projects/19-pagination)                                  |
 | `Pagination`          | [Код](projects/20-pagination)                                  |
 | `Pokedex`             | [Код](projects/21-pokedex)                                     |
+| `Password Generator`  | [Код](projects/22-password-generator)                                     |
 
 ![Превью](preview.jpg)
