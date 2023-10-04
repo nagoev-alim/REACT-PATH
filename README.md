@@ -35,12 +35,13 @@
 | `Guess Number Game`   | [Код](projects/09-guess-number)                                |
 | `Rock Paper Scissors` | [Код](projects/10-rock-paper-scissor)                          |
 | `Word Scramble Game`  | [Код](projects/11-word-scramble-game)                          |
-| `Memory Card Game`    | [Код](projects/11-word-scramble-game)                          |
+| `Memory Card Game`    | [Код](projects/12-memory-card)                                 |
 | `Modal Window`        | [Код](projects/13-modal-window)                                |
 | `QR Code Generator`   | [Код](projects/14-qr-code-generator)                           |
 | `QR Code Reader`      | [Код](projects/15-qr-code-reader)                              |
 | `Simple Converters`   | [Код](projects/16-simple-converters)                           |
 | `Currency Converter`  | [Код](projects/17-currency-converter)                          |
 | `Expense Tracker`     | [Код](projects/18-expense-tracker)                             |
+| `Pagination`          | [Код](projects/19-pagination)                                  |
 
 ![Превью](preview.jpg)
