@@ -43,5 +43,6 @@
 | `Currency Converter`  | [Код](projects/17-currency-converter)                          |
 | `Expense Tracker`     | [Код](projects/18-expense-tracker)                             |
 | `Pagination`          | [Код](projects/19-pagination)                                  |
+| `Pagination`          | [Код](projects/20-pagination)                                  |
 
 ![Превью](preview.jpg)
