@@ -44,5 +44,6 @@
 | `Expense Tracker`     | [Код](projects/18-expense-tracker)                             |
 | `Pagination`          | [Код](projects/19-pagination)                                  |
 | `Pagination`          | [Код](projects/20-pagination)                                  |
+| `Pokedex`             | [Код](projects/21-pokedex)                                     |
 
 ![Превью](preview.jpg)
