@@ -48,5 +48,7 @@
 | `Password Generator`   | [Код](projects/22-password-generator)                          |
 | `Filterable List`      | [Код](projects/23-filterable-list)                             |
 | `State Capital Lookup` | [Код](projects/24-state-capital-lookup)                        |
+| `Products Filter`      | [Код](projects/25-filter-products)                             |
+| `Products Filter`      | [Код](projects/26-filter-products)                             |
 
 ![Превью](preview.jpg)
