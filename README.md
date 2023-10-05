@@ -52,5 +52,6 @@
 | `Products Filter`      | [Код](projects/26-filter-products)                             |
 | `Sortable Table`       | [Код](projects/27-sortable-table)                              |
 | `Sortable Table`       | [Код](projects/28-sortable-table)                              |
+| `Number Facts`         | [Код](projects/29-number-facts)                                |
 
 ![Превью](preview.jpg)
