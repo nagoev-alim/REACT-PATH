@@ -62,7 +62,7 @@ const MOCK: Mock[] = [
  * React-компонент приложения.
  * @function
  * @name App
- * @description Главный компонент приложения "Random User Generator".
+ * @description Главный компонент приложения "Quote Generators".
  */
 const App = () => {
   /**

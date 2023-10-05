@@ -53,6 +53,7 @@
 | `Sortable Table`        | [Код](projects/27-sortable-table)                              |
 | `Sortable Table`        | [Код](projects/28-sortable-table)                              |
 | `Number Facts`          | [Код](projects/29-number-facts)                                |
-| `Random User Generator` | [Код](projects/230-random-user-generator)                      |
+| `Random User Generator` | [Код](projects/30-random-user-generator)                       |
+| `Quote Generators`      | [Код](projects/31-quote-generators)                            |
 
 ![Превью](preview.jpg)
