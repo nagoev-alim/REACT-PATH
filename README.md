@@ -62,5 +62,6 @@
 | `Image Resizer`         | [Код](projects/36-image-resize)                                |
 | `Save text as File`     | [Код](projects/37-save-text-as-file)                           |
 | `Translator Mini`       | [Код](projects/38-translator)                                  |
+| `Text To Speech`        | [Код](projects/39-tts)                                         |
 
 ![Превью](preview.jpg)
