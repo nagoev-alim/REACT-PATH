@@ -59,5 +59,6 @@
 | `IP Address Tracker`    | [Код](projects/33-ip-address-tracker)                          |
 | `URL Shortener`         | [Код](projects/34-url-shortener)                               |
 | `Loan Calculator`       | [Код](projects/35-loan-calculator)                             |
+| `Image Resizer`         | [Код](projects/36-image-resize)                                |
 
 ![Превью](preview.jpg)
