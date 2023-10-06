@@ -55,5 +55,6 @@
 | `Number Facts`          | [Код](projects/29-number-facts)                                |
 | `Random User Generator` | [Код](projects/30-random-user-generator)                       |
 | `Quote Generators`      | [Код](projects/31-quote-generators)                            |
+| `ZipCode Finder`        | [Код](projects/32-zipcode-finder)                              |
 
 ![Превью](preview.jpg)
