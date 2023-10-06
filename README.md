@@ -61,5 +61,6 @@
 | `Loan Calculator`       | [Код](projects/35-loan-calculator)                             |
 | `Image Resizer`         | [Код](projects/36-image-resize)                                |
 | `Save text as File`     | [Код](projects/37-save-text-as-file)                           |
+| `Translator Mini`       | [Код](projects/38-translator)                                  |
 
 ![Превью](preview.jpg)
