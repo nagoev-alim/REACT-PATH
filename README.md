@@ -58,5 +58,6 @@
 | `ZipCode Finder`        | [Код](projects/32-zipcode-finder)                              |
 | `IP Address Tracker`    | [Код](projects/33-ip-address-tracker)                          |
 | `URL Shortener`         | [Код](projects/34-url-shortener)                               |
+| `Loan Calculator`       | [Код](projects/35-loan-calculator)                             |
 
 ![Превью](preview.jpg)
