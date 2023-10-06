@@ -57,5 +57,6 @@
 | `Quote Generators`      | [Код](projects/31-quote-generators)                            |
 | `ZipCode Finder`        | [Код](projects/32-zipcode-finder)                              |
 | `IP Address Tracker`    | [Код](projects/33-ip-address-tracker)                          |
+| `URL Shortener`         | [Код](projects/34-url-shortener)                               |
 
 ![Превью](preview.jpg)
