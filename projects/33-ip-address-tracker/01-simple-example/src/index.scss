@@ -207,23 +207,6 @@ svg {
   }
 }
 
-.indicator {
-  position: relative;
-  height: 8px;
-  background-color: var(--bcs-grey-2);
-  border-radius: 4px;
-  overflow: hidden;
-
-  &::after {
-    transition: width 0.25s linear;
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    content: '';
-    left: 0;
-  }
-}
-
 :root {
   --fld-bg-light: #F8FAFC;
   --fld-c-secondary: #B8BCCA;
