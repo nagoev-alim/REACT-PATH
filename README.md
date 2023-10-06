@@ -60,5 +60,6 @@
 | `URL Shortener`         | [Код](projects/34-url-shortener)                               |
 | `Loan Calculator`       | [Код](projects/35-loan-calculator)                             |
 | `Image Resizer`         | [Код](projects/36-image-resize)                                |
+| `Save text as File`     | [Код](projects/37-save-text-as-file)                           |
 
 ![Превью](preview.jpg)
