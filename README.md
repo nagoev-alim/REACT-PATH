@@ -56,5 +56,6 @@
 | `Random User Generator` | [Код](projects/30-random-user-generator)                       |
 | `Quote Generators`      | [Код](projects/31-quote-generators)                            |
 | `ZipCode Finder`        | [Код](projects/32-zipcode-finder)                              |
+| `IP Address Tracker`    | [Код](projects/33-ip-address-tracker)                          |
 
 ![Превью](preview.jpg)
