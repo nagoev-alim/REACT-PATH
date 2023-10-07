@@ -64,5 +64,6 @@
 | `Translator Mini`       | [Код](projects/38-translator)                                  |
 | `Text To Speech`        | [Код](projects/39-tts)                                         |
 | `Weather`               | [Код](projects/40-weather)                                     |
+| `Color Palette`         | [Код](projects/41-color-palette)                               |
 
 ![Превью](preview.jpg)
