@@ -63,5 +63,6 @@
 | `Save text as File`     | [Код](projects/37-save-text-as-file)                           |
 | `Translator Mini`       | [Код](projects/38-translator)                                  |
 | `Text To Speech`        | [Код](projects/39-tts)                                         |
+| `Weather`               | [Код](projects/40-weather)                                     |
 
 ![Превью](preview.jpg)
