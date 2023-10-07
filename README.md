@@ -68,5 +68,6 @@
 | `Color Palette`         | [Код](projects/42-color-palette)                               |
 | `Count Up`              | [Код](projects/43-count-up)                                    |
 | `Movie Seat Booking`    | [Код](projects/44-movie-seat-booking)                          |
+| `Rating Stars`          | [Код](projects/45-rating-stars)                                |
 
 ![Превью](preview.jpg)
