@@ -66,5 +66,6 @@
 | `Weather`               | [Код](projects/40-weather)                                     |
 | `Color Palette`         | [Код](projects/41-color-palette)                               |
 | `Color Palette`         | [Код](projects/42-color-palette)                               |
+| `Count Up`              | [Код](projects/43-count-up)                                    |
 
 ![Превью](preview.jpg)
