@@ -253,45 +253,6 @@ input[type="checkbox"]:focus-within + .checkbox {
   outline: 3px solid #E2E7ED;
 }
 
-:root {
-  /* Colors */
-  --bcp-blue: #443DF6;
-  --bcp-grey: #1B2124;
-  --bcp-black: #000000;
-  --bcs-grey-1: #8D9091;
-  --bcs-grey-2: #CCCCCC;
-  --bcs-grey-3: #EFEFEF;
-  --bcs-grey-4: #FBFBFB;
-  --bct-navy: #191489;
-  --bct-red: #C5292A;
-  --bct-sunny: #FFD965;
-  --bct-marina: #A6D4FF;
-  --bct-green: #22B02E;
-  --gap: 15px;
-
-  /* Viewport */
-  --maximumViewportWidth: 1240;
-
-}
-
-.seat {
-  width: 20px;
-  height: 20px;
-  border: 2px solid;
-  background-color: var(--bcp-grey);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  cursor: pointer;
-
-  &.selected {
-    background-color: var(--bct-sunny);
-  }
-
-  &.occupied {
-    background-color: #fff;
-  }
-}
-
 .on {
   color: #000;
 }

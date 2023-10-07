@@ -70,5 +70,7 @@
 | `Movie Seat Booking`    | [Код](projects/44-movie-seat-booking)                          |
 | `Rating Stars`          | [Код](projects/45-rating-stars)                                |
 | `Search API`            | [Код](projects/46-search-apis)                                 |
+| `Meal Finder`           | [Код](projects/47-meal-finder)                                 |
+| `GitHub Profile`        | [Код](projects/48-github-profile)                              |
 
 ![Превью](preview.jpg)
