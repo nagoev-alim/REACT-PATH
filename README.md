@@ -67,5 +67,6 @@
 | `Color Palette`         | [Код](projects/41-color-palette)                               |
 | `Color Palette`         | [Код](projects/42-color-palette)                               |
 | `Count Up`              | [Код](projects/43-count-up)                                    |
+| `Movie Seat Booking`    | [Код](projects/44-movie-seat-booking)                          |
 
 ![Превью](preview.jpg)
