@@ -65,5 +65,6 @@
 | `Text To Speech`        | [Код](projects/39-tts)                                         |
 | `Weather`               | [Код](projects/40-weather)                                     |
 | `Color Palette`         | [Код](projects/41-color-palette)                               |
+| `Color Palette`         | [Код](projects/42-color-palette)                               |
 
 ![Превью](preview.jpg)
