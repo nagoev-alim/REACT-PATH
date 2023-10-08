@@ -75,5 +75,6 @@
 | `GitHub Finder`         | [Код](projects/49-github-finder)                               |
 | `BookHub`               | [Код](projects/50-bookhub)                                     |
 | `Twitty Microposts`     | [Код](projects/51-twitty-microposts)                           |
+| `Feedback UI`           | [Код](projects/52-feedback-ui)                                 |
 
 ![Превью](preview.jpg)
