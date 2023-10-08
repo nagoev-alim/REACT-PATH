@@ -72,5 +72,6 @@
 | `Search API`            | [Код](projects/46-search-apis)                                 |
 | `Meal Finder`           | [Код](projects/47-meal-finder)                                 |
 | `GitHub Profile`        | [Код](projects/48-github-profile)                              |
+| `GitHub Finder`         | [Код](projects/49-github-finder)                               |
 
 ![Превью](preview.jpg)
