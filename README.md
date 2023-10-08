@@ -73,5 +73,6 @@
 | `Meal Finder`           | [Код](projects/47-meal-finder)                                 |
 | `GitHub Profile`        | [Код](projects/48-github-profile)                              |
 | `GitHub Finder`         | [Код](projects/49-github-finder)                               |
+| `BookHub`               | [Код](projects/50-bookhub)                                     |
 
 ![Превью](preview.jpg)
