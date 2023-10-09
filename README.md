@@ -77,5 +77,6 @@
 | `Twitty Microposts`     | [Код](projects/51-twitty-microposts)                           |
 | `Feedback UI`           | [Код](projects/52-feedback-ui)                                 |
 | `Quiz`                  | [Код](projects/53-quiz)                                        |
+| `Shopping Cart`         | [Код](projects/54-shopping-cart)                               |
 
 ![Превью](preview.jpg)
