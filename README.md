@@ -78,5 +78,6 @@
 | `Feedback UI`           | [Код](projects/52-feedback-ui)                                 |
 | `Quiz`                  | [Код](projects/53-quiz)                                        |
 | `Shopping Cart`         | [Код](projects/54-shopping-cart)                               |
+| `Shopping Cart`         | [Код](projects/55-shopping-cart)                               |
 
 ![Превью](preview.jpg)
