@@ -76,5 +76,6 @@
 | `BookHub`               | [Код](projects/50-bookhub)                                     |
 | `Twitty Microposts`     | [Код](projects/51-twitty-microposts)                           |
 | `Feedback UI`           | [Код](projects/52-feedback-ui)                                 |
+| `Quiz`                  | [Код](projects/53-quiz)                                        |
 
 ![Превью](preview.jpg)
