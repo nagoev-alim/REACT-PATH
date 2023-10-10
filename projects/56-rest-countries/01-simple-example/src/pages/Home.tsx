@@ -64,7 +64,7 @@ const Home = () => {
    * @param {string} query - Строка запроса для поиска стран.
    * @param {string} region - Регион для фильтрации стран.
    */
-  function handleFilter(query: string, region: string) {
+  function handleFilter(query: string, region: string): void {
     let copy = [...countries];
     copy = region ? copy.filter(item => item.region.includes(region)) : copy;
     copy = query ? copy.filter(item => item.name.toLowerCase().includes(query.toLowerCase())) : copy;

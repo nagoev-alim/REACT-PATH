@@ -1,36 +1,7 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { filterByCode, searchByCountry } from '../utils/constants.ts';
+import { useEffect } from 'react';
 import { Loading } from '../components';
-import toast from 'react-hot-toast';
-
-/**
- * Интерфейс, представляющий информацию о стране.
- * @interface
- */
-interface Country {
-  name: string;
-  nativeName: string;
-  flag: string;
-  capital: string;
-  population: number;
-  region: string;
-  subregion: string;
-  topLevelDomain: string[];
-  currencies: {
-    code: string;
-    name: string;
-    symbol: string;
-  }[];
-  languages: {
-    iso639_1: string;
-    iso639_2: string,
-    name: string,
-    nativeName: string
-  }[];
-  borders: string[];
-}
+import { useAppContext } from '../context/AppContext.tsx';
 
 /**
  * Компонент для отображения информации о выбранной стране.
@@ -39,10 +10,7 @@ interface Country {
 const Single = () => {
   const { name } = useParams();
   const navigate = useNavigate();
-  const [country, setCountry] = useState<Country | null>(null);
-  const [countryBorders, setCountryBorders] = useState<string[] | []>([]);
-  const [loading, setLoading] = useState<boolean>(false);
-  console.log({ country, countryBorders });
+  const {isLoading, country, countryBorders, fetchCountry} = useAppContext()
   /**
    * Загрузка информации о стране.
    * @param {string} name - Название страны.
@@ -51,42 +19,7 @@ const Single = () => {
     if (name) fetchCountry(name);
   }, [name]);
 
-  /**
-   * Функция для получения информации о стране из API.
-   * @param {string} name - Название страны.
-   */
-  async function fetchCountry(name: string): Promise<void> {
-    try {
-      setLoading(true);
-      const { data } = await axios.get(searchByCountry(name));
-      setCountry({
-        name: data[0].name,
-        nativeName: data[0].nativeName,
-        flag: data[0].flag,
-        capital: data[0].capital,
-        population: data[0].population,
-        region: data[0].region,
-        subregion: data[0].subregion,
-        topLevelDomain: data[0].topLevelDomain,
-        currencies: data[0].currencies,
-        languages: data[0].languages,
-        borders: data[0].borders,
-      });
-      if (data[0].borders && data[0].borders.length !== 0) {
-        const { data: dataBorder } = await axios.get(filterByCode(data[0].borders));
-        setCountryBorders(dataBorder.map(b => b.name));
-      }
-    } catch (e) {
-      if (e instanceof Error) {
-        console.log(e.message);
-        toast.error('Something wrong, open dev console.');
-      }
-    } finally {
-      setLoading(false);
-    }
-  }
-
-  if (loading) {
+  if (isLoading) {
     return <Loading />;
   }
   return country && (
