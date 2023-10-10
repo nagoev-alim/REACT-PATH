@@ -25,6 +25,7 @@
 | Название                | <img width='30' src="https://skillicons.dev/icons?i=github" /> |
 |:------------------------|:---------------------------------------------------------------|
 | `Counter`               | [Код](projects/01-counter)                                     |
+| `Date Counter`          | [Код](projects/58-date-counter)                                |
 | `Stopwatch`             | [Код](projects/02-stopwatch)                                   |
 | `Timer`                 | [Код](projects/03-timer)                                       |
 | `Countdown`             | [Код](projects/04-countdown)                                   |
