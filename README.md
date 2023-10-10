@@ -27,6 +27,7 @@
 | `Counter`               | [Код](projects/01-counter)                                     |
 | `Date Counter`          | [Код](projects/58-date-counter)                                |
 | `Date Counter`          | [Код](projects/59-date-counter)                                |
+| `Flash Cards`           | [Код](projects/60-flash-cards)                                 |
 | `Stopwatch`             | [Код](projects/02-stopwatch)                                   |
 | `Timer`                 | [Код](projects/03-timer)                                       |
 | `Countdown`             | [Код](projects/04-countdown)                                   |
