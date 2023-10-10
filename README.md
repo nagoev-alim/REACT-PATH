@@ -54,6 +54,7 @@
 | `Sortable Table`        | [Код](projects/28-sortable-table)                              |
 | `Number Facts`          | [Код](projects/29-number-facts)                                |
 | `Random User Generator` | [Код](projects/30-random-user-generator)                       |
+| `Get Advice`            | [Код](projects/57-get-advice)                                  |
 | `Quote Generators`      | [Код](projects/31-quote-generators)                            |
 | `ZipCode Finder`        | [Код](projects/32-zipcode-finder)                              |
 | `IP Address Tracker`    | [Код](projects/33-ip-address-tracker)                          |
