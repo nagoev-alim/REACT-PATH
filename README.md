@@ -37,6 +37,7 @@
 | `Accordion`                 | [Код](projects/64-accordion)                                   |
 | `Characters Counter`        | [Код](projects/06-characters-counter)                          |
 | `Detect Pressed Key`        | [Код](projects/07-detect-pressed-key)                          |
+| `Far Away`                  | [Код](projects/66-far-away)                                    |
 | `Guess Number Game`         | [Код](projects/08-guess-number)                                |
 | `Guess Number Game`         | [Код](projects/09-guess-number)                                |
 | `Rock Paper Scissors`       | [Код](projects/10-rock-paper-scissor)                          |
