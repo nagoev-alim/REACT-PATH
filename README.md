@@ -34,6 +34,7 @@
 | `Timer`                     | [Код](projects/03-timer)                                       |
 | `Countdown`                 | [Код](projects/04-countdown)                                   |
 | `Alarm Clock`               | [Код](projects/05-alarm-clock)                                 |
+| `Accordion`                 | [Код](projects/64-accordion)                                   |
 | `Characters Counter`        | [Код](projects/06-characters-counter)                          |
 | `Detect Pressed Key`        | [Код](projects/07-detect-pressed-key)                          |
 | `Guess Number Game`         | [Код](projects/08-guess-number)                                |
