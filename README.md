@@ -28,6 +28,7 @@
 | `Date Counter`              | [Код](projects/58-date-counter)                                |
 | `Date Counter`              | [Код](projects/59-date-counter)                                |
 | `Flash Cards`               | [Код](projects/60-flash-cards)                                 |
+| `Simple Expense Tracker`    | [Код](projects/69-simple-expense-tracker)                      |
 | `Text Expander`             | [Код](projects/61-text-expander)                               |
 | `Geo Position`              | [Код](projects/62-use-geolocation)                             |
 | `Stopwatch`                 | [Код](projects/02-stopwatch)                                   |
