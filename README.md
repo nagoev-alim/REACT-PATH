@@ -93,5 +93,6 @@
 | `Shopping Cart`             | [Код](projects/54-shopping-cart)                               |
 | `Shopping Cart`             | [Код](projects/55-shopping-cart)                               |
 | `REST Countries`            | [Код](projects/56-rest-countries)                              |
+| `GameHub`                   | [Код](projects/70-game-hub)                                    |
 
 ![Превью](preview.jpg)
