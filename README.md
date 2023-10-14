@@ -91,6 +91,7 @@
 | `Twitty Microposts`         | [Код](projects/51-twitty-microposts)                           |
 | `Feedback UI`               | [Код](projects/52-feedback-ui)                                 |
 | `Quiz`                      | [Код](projects/53-quiz)                                        |
+| `Quiz`                      | [Код](projects/72-quiz)                                        |
 | `Shopping Cart`             | [Код](projects/54-shopping-cart)                               |
 | `Shopping Cart`             | [Код](projects/55-shopping-cart)                               |
 | `REST Countries`            | [Код](projects/56-rest-countries)                              |
