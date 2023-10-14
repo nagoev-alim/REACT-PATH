@@ -36,6 +36,7 @@
 | `Countdown`                 | [Код](projects/04-countdown)                                   |
 | `Alarm Clock`               | [Код](projects/05-alarm-clock)                                 |
 | `Accordion`                 | [Код](projects/64-accordion)                                   |
+| `Tabs`                      | [Код](projects/71-simple-tabs)                                 |
 | `Characters Counter`        | [Код](projects/06-characters-counter)                          |
 | `Detect Pressed Key`        | [Код](projects/07-detect-pressed-key)                          |
 | `Far Away`                  | [Код](projects/66-far-away)                                    |
