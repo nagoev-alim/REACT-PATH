@@ -1,3 +1,6 @@
+## ⚠️ Резерный репозиторий.
+## ✅ Обновленная версия - [Next.js Projects Collection](https://github.com/nagoev-id/nextjs-projects)
+
 <p align="center">
   <img src="https://skillicons.dev/icons?i=html,css,scss,tailwind,typescript,react,next,vite"  alt="Stack"/>
 </p>
